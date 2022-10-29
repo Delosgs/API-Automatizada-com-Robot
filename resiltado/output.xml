@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20221018 22:44:34.981" rpa="false" schemaversion="3">
+<suite id="s1" name="APITeste" source="C:\API_teste\Teste\APITeste.robot">
+<kw name="Conectar a minha API" library="ResourceAPI" type="SETUP">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>TesteAPI</arg>
+<arg>${URL_API}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20221018 22:44:35.103" level="INFO">Creating Session using : alias=TesteAPI, url=https://fakerestapi.azurewebsites.net/api/v1/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20221018 22:44:35.102" endtime="20221018 22:44:35.103"/>
+</kw>
+<status status="PASS" starttime="20221018 22:44:35.102" endtime="20221018 22:44:35.103"/>
+</kw>
+<test id="s1-t1" name="Buscar a listagem de todos os livros (GET em todos os livros)" line="8">
+<kw name="Requisitar todos os livros" library="ResourceAPI">
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${RESPOSTA}</var>
+<arg>TesteAPI</arg>
+<arg>Books</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20221018 22:44:38.193" level="INFO">GET Request : url=https://fakerestapi.azurewebsites.net/api/v1/Books 
+ path_url=/api/v1/Books 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20221018 22:44:38.194" level="INFO">GET Response : url=https://fakerestapi.azurewebsites.net/api/v1/Books 
+ status=200, reason=OK 
+ headers={'Content-Type': 'application/json; charset=utf-8; v=1.0', 'Date': 'Wed, 19 Oct 2022 01:44:37 GMT', 'Server': 'Kestrel', 'Transfer-Encoding': 'chunked', 'api-supported-versions': '1.0'} 
+ body=[{"id":1,"title":"Book 1","description":"Dolore amet sed sanctus sadipscing sit feugiat autem amet kasd sed accusam et duo eirmod. Dolore hendrerit sed ipsum amet duo magna. Aliquyam eum accusam sit ipsum vel veniam labore nulla eirmod velit. Possim eros dolore vero duis elitr et tempor invidunt gubergren. Ut erat ut dolor labore invidunt ipsum sanctus aliquip. Sea justo sea elitr est.\n","pageCount":100,"excerpt":"At dolor invidunt et eirmod et aliquyam no erat et nulla lorem stet eirmod aliquyam eirmod adipiscing. Blandit ipsum duo. Id duo amet consetetur vulputate ut kasd sadipscing et rebum takimata dolore. Duo feugait labore diam. Ut et nulla id sanctus clita ipsum justo sanctus. Accumsan ex accusam magna. Et est sanctus lobortis dolore adipiscing euismod diam vero placerat. Odio elitr dolor eum et. Facilisi amet et est. Aliquip sadipscing sadipscing est et amet nostrud. Lorem et zzril sed eos stet ut dolor dolor invidunt est no sea ut. Et volutpat qui illum sea doming minim mazim amet sanctus clita rebum lorem et sanctus clita clita accusam diam. Amet sanctus duo tempor accumsan sea option et in gubergren no augue. Ipsum in gubergren no amet et ipsum sed in clita amet augue. Diam rebum euismod hendrerit autem ea nibh stet est diam erat at amet erat dolor no vero est. Invidunt rebum diam ullamcorper wisi commodo et aliquyam nonumy est.\nVulputate consectetuer sadipscing lorem consectetuer id magna gubergren facilisis dolore ea. Magna takimata clita ullamcorper facilisi eum invidunt ipsum dolores duo labore eum gubergren et wisi justo nonumy. Et vero feugait sadipscing takimata facilisi magna sea amet duis erat sea duis dolor diam kasd ea at elitr. Sed no dolor no dolores. Vero ea nulla eos dolore elit molestie labore iusto sit est ut.\nEt et ipsum kasd erat justo takimata tempor clita et. Gubergren sanctus elitr quis. Diam doming magna aliquyam nonumy eum lorem sit. Dolor dolor dolores dolore dolores sea nonumy ipsum sea duis dolor dolore. Eros sea magna sea ea justo nam. Invidunt invidunt takimata diam id hendrerit stet in eirmod dolor eos et elitr at. Accusam dolor suscipit sit sea. Ipsum dolor eos. Dolores duis facilisi nonumy mazim labore aliquip sit dolore diam voluptua. Eirmod clita iriure. Invidunt sit sea sed sit amet nibh voluptua diam duo sed magna. Dolore at labore nonumy amet amet consetetur sit gubergren. Clita eos est sed diam lorem aliquyam lorem amet diam sea diam iriure elitr sanctus est amet eos. At labore sed stet veniam sanctus dolore amet no eum ut sea et. At et sanctus lorem erat ea accusam no amet dolor justo vero ipsum nulla invidunt dolor aliquip amet et. Iriure sed ipsum lobortis dolor hendrerit iusto dolores ipsum sit ipsum et dolor. Diam et tempor duo est et molestie ex et eirmod feugiat sit gubergren ut dolor et molestie consequat. Kasd consetetur sit ipsum labore ea adipiscing sit esse vero lorem eu labore quis sit.\nErat diam gubergren tempor lorem sadipscing diam rebum tempor accusam sea aliquyam et sanctus ut at aliquip est. Sit eirmod labore nonumy amet elit. Takimata ipsum nobis takimata eirmod. Augue ea tempor magna congue sit. Feugiat sea sed dolore rebum kasd ea et kasd justo stet molestie kasd augue est dolore et lorem. Clita stet duis rebum justo sit sea accusam ea. Dolor ullamcorper esse invidunt diam dolores accusam ullamcorper assum. Amet ut vero nonumy sit option. Molestie congue invidunt sit et liber kasd adipiscing. Sit labore ipsum lorem eirmod quis ea sadipscing ut dolores stet dolores sit et consetetur dolor diam sit at. Elit nihil accusam amet labore consetetur lorem dolores placerat eros diam justo nonumy molestie eirmod ullamcorper stet.\nEt vel et. Lorem eos et ea et et. Diam eum kasd nam amet diam stet ipsum. No sea sit wisi diam et invidunt facilisi nostrud autem. Nonummy diam lorem in lorem sed nihil stet est delenit. Dolor sea dolor sed et erat nostrud sadipscing molestie delenit amet et accusam esse. Eos dolor sea amet odio et labore invidunt dolore erat no magna esse sed rebum justo sit. Stet et magna duo adipiscing et. Autem sed gubergren accusam stet sit rebum sit no.\n","publishDate":"2022-10-18T01:44:37.4139142+00:00"},{"id":2,"title":"Book 2","description":"Ipsum est hendrerit blandit et ea tempor takimata lorem sed amet elitr voluptua. Dolores nulla ea feugait est. Et odio nonumy ad quis nonumy ipsum et et in aliquam aliquam. In rebum blandit tempor at tincidunt dolor sed. Amet lorem sanctus ipsum exerci magna dignissim tempor eu ea. Aliquyam nostrud sadipscing. Elitr congue sed no imperdiet sanctus dolor sed ea.\n","pageCount":200,"excerpt":"Minim laoreet labore dolor dolores sanctus dolore lobortis no praesent ipsum ipsum vero accusam erat lorem nonumy. Et dolores invidunt et sit diam suscipit voluptua justo suscipit. Et labore amet sit diam ea adipiscing. Labore eirmod consetetur est consetetur tempor et et ea vero hendrerit consetetur sit ea ipsum. Et dolore exerci nonumy erat at eum ut et ea ipsum. Nonummy sit mazim duo ipsum diam no elitr nulla et consetetur erat dolore erat dolor ad justo stet magna. Ut diam sadipscing nam adipiscing dolor no. Sea adipiscing nostrud at eos nostrud eos diam dolor zzril aliquam takimata kasd consetetur. Ad dolore ipsum est sea et vel sit ut eirmod consetetur sanctus aliquam eos amet lorem et. Magna labore rebum. Facilisis feugait eu qui ipsum sadipscing sit lorem. Facilisi duo dolor gubergren takimata et ea amet odio diam sit. Sed est dolore et et vel vulputate magna et dolor consetetur. Invidunt invidunt ut et ipsum labore sanctus kasd ut tincidunt.\nEos erat amet congue aliquyam diam dolore feugiat aliquyam dolores. Ullamcorper nonumy at magna velit dolores amet sed voluptua dolor ipsum clita diam sanctus eu. Consectetuer ipsum luptatum at clita ea lorem delenit at dolor sanctus. Erat ipsum lobortis stet. Nisl iriure no justo aliquyam sadipscing nobis tempor lorem no sed vero. Eirmod eos amet placerat duo erat lorem ullamcorper zzril. Suscipit et invidunt minim sadipscing rebum est eleifend vero ut dolore sed. Duo ut vero dolore erat erat sit ipsum lorem lorem lorem stet. At autem magna justo nonumy quod accumsan dolor dolore minim dolore sadipscing dolor at justo dolore. Dolore vero elit congue odio takimata euismod duis duo. Dolore lorem hendrerit sit sed lorem ut et. Consetetur duo amet amet kasd duis zzril aliquip ipsum option aliquam elitr soluta iusto. Aliquyam dignissim duo aliquyam zzril. Minim ea dignissim.\nConsetetur no sadipscing at. Ut takimata et labore nulla sit sadipscing sed. Et feugiat ut nam elitr elitr dolor elitr duo dolores.\nEros tempor iusto at tempor vel sadipscing justo takimata sanctus sit dolores dolore consetetur et sed invidunt. No et nonumy tempor nonummy sadipscing te lorem lorem clita takimata gubergren duo laoreet diam sadipscing no. Labore nonumy eirmod lorem est quod facilisi clita accusam. Magna invidunt praesent amet sanctus praesent erat sed tempor accusam exerci ea clita consequat. Clita dolores vero diam in praesent tempor ipsum dolor et accumsan accusam justo dolor. Voluptua sed justo est ipsum invidunt at est no magna dolores dignissim sed nibh sed no consetetur justo. Sea et eu. Sed duo rebum ut. Elitr amet diam ut est eirmod rebum lorem gubergren lorem accumsan magna dolor.\nDolor erat diam ipsum dolor elitr. Et eirmod ea nonummy voluptua. At eirmod sea dolor nulla et takimata accusam vero dolor magna diam lorem ex eos luptatum ipsum te est. No sit et at dolores illum dolores sadipscing eros sit justo nulla dolor sea sed tation tempor lorem. Magna ut autem iusto consequat amet et invidunt sit elit elitr lorem. Velit sea sit no nulla ut. Velit nonumy praesent at dolore est eleifend lorem consetetur erat esse takimata nulla vulputate ipsum suscipit. Ut sit eirmod vel labore sit lorem dolore. Sit ut tation vulputate lorem dolor duo nulla lorem. Vel clita ut nonumy sit est sanctus facilisi aliquyam nonumy. In magna gubergren rebum elitr dolore erat amet dolor blandit doming. Eu amet lorem ut aliquyam ut et consequat clita nulla te iusto dolor lobortis. Vero eos aliquyam magna justo stet sea. Voluptua aliquyam in. Lorem erat ea et lorem ut eu aliquip sadipscing diam iriure et.\n","publishDate":"2022-10-17T01:44:37.4139844+00:00"},{"id":3,"title":"Book 3","description":"Elitr congue et ea eirmod gubergren erat sed exerci dolor voluptua consetetur. Sea elitr takimata tincidunt vero ea dolor stet. Labore et takimata sit tincidunt amet. Vel vero at. Lorem ea sit dolor et. Invidunt aliquam diam labore aliquyam accusam aliquyam aliquyam vero ea diam ea at elit magna. Eos elitr ipsum ut dolores erat iriure est clita voluptua kasd. Dolore veniam quis ut. Ut erat aliquyam labore diam aliquyam est eu ut vulputate stet iriure voluptua accusam sadipscing blandit. Ut sed dolor placerat consetetur eirmod. Ex dolore ullamcorper sit feugait et invidunt sed tincidunt erat.\n","pageCount":300,"excerpt":"Et dolor takimata. Duis vel et assum dolore. Iusto et ut eu sadipscing in. Dolore vero kasd sit gubergren ad dolores et kasd labore dolore et dignissim ipsum clita. Justo eos iriure at elit magna nibh diam lorem. Accusam et lobortis labore aliquyam. Ex luptatum ut tempor clita illum amet elitr erat ut nonummy consetetur consequat nulla justo eos diam rebum. Dolores nibh sit est diam blandit ea vero vero est dolores praesent elitr magna sea. At et takimata sit sit nulla ea sit dolor sed vero ut ipsum lorem sed. Sed sed congue sit sea erat nobis. Nulla lobortis consetetur nonumy et nulla lorem lorem quod kasd erat tincidunt sadipscing erat sadipscing stet.\nDolores sea eirmod kasd sea delenit amet ipsum sed eirmod nonumy ea elitr ipsum eos diam consetetur. Consectetuer gubergren tempor lorem lorem nulla magna aliquyam labore ipsum velit vero eirmod eirmod esse amet et. Erat aliquyam sed et sea tempor magna et vero tempor sanctus iriure no. Et sed diam amet stet. Accusam sea amet ut consetetur. Lorem ipsum kasd vero enim odio sea gubergren ea justo est lorem elitr sadipscing te eum ... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg timestamp="20221018 22:44:38.195" level="INFO">C:\Users\verus\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'fakerestapi.azurewebsites.net'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20221018 22:44:38.198" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20221018 22:44:35.104" endtime="20221018 22:44:38.198"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${RESPOSTA.headers}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221018 22:44:38.201" level="INFO">{'Content-Type': 'application/json; charset=utf-8; v=1.0', 'Date': 'Wed, 19 Oct 2022 01:44:37 GMT', 'Server': 'Kestrel', 'Transfer-Encoding': 'chunked', 'api-supported-versions': '1.0'}</msg>
+<status status="PASS" starttime="20221018 22:44:38.198" endtime="20221018 22:44:38.202"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${RESPOSTA}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20221018 22:44:38.203" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20221018 22:44:38.202" endtime="20221018 22:44:38.204"/>
+</kw>
+<status status="PASS" starttime="20221018 22:44:35.104" endtime="20221018 22:44:38.204"/>
+</kw>
+<kw name="Conferir o status code" library="ResourceAPI">
+<arg>200</arg>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${RESPOSTA.status_code}</arg>
+<arg>${STATUSCODE_DESEJADO}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20221018 22:44:38.208" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20221018 22:44:38.206" endtime="20221018 22:44:38.208"/>
+</kw>
+<status status="PASS" starttime="20221018 22:44:38.205" endtime="20221018 22:44:38.208"/>
+</kw>
+<kw name="Conferir o reason" library="ResourceAPI">
+<arg>OK</arg>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${RESPOSTA.reason}</arg>
+<arg>${REASON_DESEJADO}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20221018 22:44:38.209" endtime="20221018 22:44:38.211"/>
+</kw>
+<status status="PASS" starttime="20221018 22:44:38.209" endtime="20221018 22:44:38.211"/>
+</kw>
+<kw name="Conferir se retorna uma lista com &quot;200&quot; livros" library="ResourceAPI" sourcename="Conferir se retorna uma lista com &quot;${QDT_LIVROS}&quot; livros">
+<kw name="Length Should Be" library="BuiltIn">
+<arg>${RESPOSTA.json()}</arg>
+<arg>${QDT_LIVROS}</arg>
+<doc>Verifies that the length of the given item is correct.</doc>
+<msg timestamp="20221018 22:44:38.218" level="INFO">Length is 200</msg>
+<status status="PASS" starttime="20221018 22:44:38.212" endtime="20221018 22:44:38.218"/>
+</kw>
+<status status="PASS" starttime="20221018 22:44:38.211" endtime="20221018 22:44:38.218"/>
+</kw>
+<status status="PASS" starttime="20221018 22:44:35.103" endtime="20221018 22:44:38.219"/>
+</test>
+<test id="s1-t2" name="Buscar um livro especifico (GET em um livro especifico)" line="14">
+<kw name="Requisitar o livro &quot;15&quot;" library="ResourceAPI" sourcename="Requisitar o livro &quot;${ID_LIVROS}&quot;">
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${RESPOSTA}</var>
+<arg>TesteAPI</arg>
+<arg>Books/${ID_LIVROS}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20221018 22:44:38.499" level="INFO">GET Request : url=https://fakerestapi.azurewebsites.net/api/v1/Books/15 
+ path_url=/api/v1/Books/15 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20221018 22:44:38.499" level="INFO">GET Response : url=https://fakerestapi.azurewebsites.net/api/v1/Books/15 
+ status=200, reason=OK 
+ headers={'Content-Type': 'application/json; charset=utf-8; v=1.0', 'Date': 'Wed, 19 Oct 2022 01:44:39 GMT', 'Server': 'Kestrel', 'Transfer-Encoding': 'chunked', 'api-supported-versions': '1.0'} 
+ body={"id":15,"title":"Book 15","description":"Accumsan et dolore iusto te. Ipsum dolores aliquam amet consetetur nibh volutpat ipsum aliquyam veniam iriure aliquam feugait volutpat. Eos sed duo minim rebum eleifend odio amet sed praesent. Liber et erat eos vero dolore tempor nulla et stet elitr no sanctus labore sit sed. Consequat kasd nonumy congue volutpat. In nulla diam nulla justo justo diam voluptua ut dignissim et labore eos autem consetetur eos tempor. Dolore consetetur velit erat ea nostrud sit magna et eu rebum dolor id. Tempor accusam nulla invidunt amet dolores doming vel sit eu nonummy lorem no lobortis kasd lorem dolore. At labore adipiscing accusam exerci lorem voluptua kasd vero stet eu et et est eleifend takimata amet te tincidunt. Justo kasd facilisi ut rebum takimata feugiat tempor est enim takimata dolores eos molestie.\n","pageCount":1500,"excerpt":"Sed autem dolores stet aliquyam vel accumsan sed et rebum zzril suscipit. Autem et et eos dignissim takimata amet dolor et nulla at nulla erat et wisi et dolor rebum. Duo hendrerit clita magna ipsum clita aliquyam sed zzril kasd no. In volutpat no invidunt accusam consetetur ex lorem vero nonummy amet gubergren dolores no ipsum. Rebum ea aliquyam sit et clita ut labore ipsum stet in takimata kasd gubergren sea tempor. Gubergren erat molestie dolores diam. Stet voluptua lorem quis ullamcorper amet est id amet magna sit sed gubergren sadipscing ea tempor. Stet gubergren ipsum sanctus diam gubergren.\nConsetetur lorem consetetur diam sadipscing facilisis ipsum sit ad diam nonumy delenit ipsum diam lorem. Gubergren adipiscing et duo commodo vero tempor voluptua magna diam eirmod augue stet sadipscing lorem. Aliquip in assum invidunt rebum tation dignissim sit. Ipsum sit aliquyam facilisi vel at nonummy lobortis gubergren. At dignissim esse labore et sit vero gubergren est ipsum nonumy elitr no aliquyam molestie. Sit ut duis voluptua kasd amet takimata consectetuer amet sit sed dolores in dignissim duis. Nonumy wisi facilisis sit sadipscing dolor sanctus dignissim qui nibh lorem sed voluptua et. Sed elitr blandit augue labore et est nobis iusto sed sit in sea. Lorem justo stet rebum luptatum vero eirmod at tempor. Gubergren vero duo dolores ea amet tempor justo invidunt commodo. Sed magna sit ea invidunt luptatum. Kasd in ipsum ea invidunt et diam diam feugait lorem. Vero nonumy no ad sanctus justo invidunt sanctus justo dolore aliquip. Quis ad minim vero facilisis diam lorem facilisi eum eirmod et takimata diam ut gubergren sed vero tempor sanctus.\nIpsum dolor sit et adipiscing vero magna aliquyam iriure duo eos ullamcorper ea kasd. Aliquip suscipit eirmod vero sed sed rebum. Dolor sed sed magna hendrerit lorem ut dolor dolor stet diam vel et tempor dolor sit. Nulla voluptua takimata et dolore velit sed accusam duo labore dolor et dolore ea takimata voluptua et. Et lorem ut sanctus no amet duo accusam. Duo sit option et sit. Sed sed nisl vero ut dolores et.\nEt laoreet lobortis gubergren augue tempor ut cum luptatum rebum clita ipsum consectetuer. Ipsum invidunt aliquyam sed nibh clita cum ea minim et possim et illum in justo duo hendrerit erat. Eos diam ut dolor tempor ut stet ipsum justo sanctus et zzril dolor nonumy hendrerit. Et nulla clita velit consectetuer. Takimata soluta nihil nonumy dolore dolore aliquyam kasd dolores et amet et sit diam amet erat sed lorem. Magna dolor et dignissim nisl liber sit ipsum nihil dolor. Rebum sea sanctus sit zzril voluptua stet sit et luptatum doming vulputate diam sadipscing congue ut aliquyam consectetuer luptatum. Sea sanctus ut aliquam accusam erat clita. Facilisis soluta veniam aliquam consetetur ea dolor elitr dolore kasd et congue dolore et consetetur diam. Odio duis vel labore diam iriure molestie ipsum. In adipiscing elitr clita vero sit wisi ea takimata dolore sit. Lorem sed et gubergren. Tempor nonumy sadipscing rebum magna elitr sed ipsum vero magna sea rebum stet iriure facer dolore est sadipscing.\nTempor et ipsum accumsan aliquam takimata rebum stet et dolore commodo nonumy sed. Sadipscing labore ex vero rebum. Invidunt dolor quis facilisis molestie illum duo elitr nihil dolore ipsum et ut aliquyam stet dolor sed consequat ut. Gubergren consetetur dolor amet facilisi sanctus sea accusam sit feugiat stet stet quis lorem sit nonummy nulla nulla erat. Dolor in in no iusto lorem. Congue rebum elitr facilisi sit ex ut. Gubergren vero dolore et et vero no clita et autem dolor diam diam doming sed invidunt. Et lorem et dolor ut gubergren rebum sea no magna. Consectetuer option at. Vero est et takimata. Gubergren amet et tincidunt dolore duis sadipscing eos diam magna accusam takimata feugiat et. Diam vel ipsum et stet et doming.\n","publishDate":"2022-10-04T01:44:39.4107723+00:00"} 
+ </msg>
+<msg timestamp="20221018 22:44:38.499" level="INFO">C:\Users\verus\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'fakerestapi.azurewebsites.net'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20221018 22:44:38.501" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20221018 22:44:38.222" endtime="20221018 22:44:38.501"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${RESPOSTA.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221018 22:44:38.503" level="INFO">{"id":15,"title":"Book 15","description":"Accumsan et dolore iusto te. Ipsum dolores aliquam amet consetetur nibh volutpat ipsum aliquyam veniam iriure aliquam feugait volutpat. Eos sed duo minim rebum eleifend odio amet sed praesent. Liber et erat eos vero dolore tempor nulla et stet elitr no sanctus labore sit sed. Consequat kasd nonumy congue volutpat. In nulla diam nulla justo justo diam voluptua ut dignissim et labore eos autem consetetur eos tempor. Dolore consetetur velit erat ea nostrud sit magna et eu rebum dolor id. Tempor accusam nulla invidunt amet dolores doming vel sit eu nonummy lorem no lobortis kasd lorem dolore. At labore adipiscing accusam exerci lorem voluptua kasd vero stet eu et et est eleifend takimata amet te tincidunt. Justo kasd facilisi ut rebum takimata feugiat tempor est enim takimata dolores eos molestie.\n","pageCount":1500,"excerpt":"Sed autem dolores stet aliquyam vel accumsan sed et rebum zzril suscipit. Autem et et eos dignissim takimata amet dolor et nulla at nulla erat et wisi et dolor rebum. Duo hendrerit clita magna ipsum clita aliquyam sed zzril kasd no. In volutpat no invidunt accusam consetetur ex lorem vero nonummy amet gubergren dolores no ipsum. Rebum ea aliquyam sit et clita ut labore ipsum stet in takimata kasd gubergren sea tempor. Gubergren erat molestie dolores diam. Stet voluptua lorem quis ullamcorper amet est id amet magna sit sed gubergren sadipscing ea tempor. Stet gubergren ipsum sanctus diam gubergren.\nConsetetur lorem consetetur diam sadipscing facilisis ipsum sit ad diam nonumy delenit ipsum diam lorem. Gubergren adipiscing et duo commodo vero tempor voluptua magna diam eirmod augue stet sadipscing lorem. Aliquip in assum invidunt rebum tation dignissim sit. Ipsum sit aliquyam facilisi vel at nonummy lobortis gubergren. At dignissim esse labore et sit vero gubergren est ipsum nonumy elitr no aliquyam molestie. Sit ut duis voluptua kasd amet takimata consectetuer amet sit sed dolores in dignissim duis. Nonumy wisi facilisis sit sadipscing dolor sanctus dignissim qui nibh lorem sed voluptua et. Sed elitr blandit augue labore et est nobis iusto sed sit in sea. Lorem justo stet rebum luptatum vero eirmod at tempor. Gubergren vero duo dolores ea amet tempor justo invidunt commodo. Sed magna sit ea invidunt luptatum. Kasd in ipsum ea invidunt et diam diam feugait lorem. Vero nonumy no ad sanctus justo invidunt sanctus justo dolore aliquip. Quis ad minim vero facilisis diam lorem facilisi eum eirmod et takimata diam ut gubergren sed vero tempor sanctus.\nIpsum dolor sit et adipiscing vero magna aliquyam iriure duo eos ullamcorper ea kasd. Aliquip suscipit eirmod vero sed sed rebum. Dolor sed sed magna hendrerit lorem ut dolor dolor stet diam vel et tempor dolor sit. Nulla voluptua takimata et dolore velit sed accusam duo labore dolor et dolore ea takimata voluptua et. Et lorem ut sanctus no amet duo accusam. Duo sit option et sit. Sed sed nisl vero ut dolores et.\nEt laoreet lobortis gubergren augue tempor ut cum luptatum rebum clita ipsum consectetuer. Ipsum invidunt aliquyam sed nibh clita cum ea minim et possim et illum in justo duo hendrerit erat. Eos diam ut dolor tempor ut stet ipsum justo sanctus et zzril dolor nonumy hendrerit. Et nulla clita velit consectetuer. Takimata soluta nihil nonumy dolore dolore aliquyam kasd dolores et amet et sit diam amet erat sed lorem. Magna dolor et dignissim nisl liber sit ipsum nihil dolor. Rebum sea sanctus sit zzril voluptua stet sit et luptatum doming vulputate diam sadipscing congue ut aliquyam consectetuer luptatum. Sea sanctus ut aliquam accusam erat clita. Facilisis soluta veniam aliquam consetetur ea dolor elitr dolore kasd et congue dolore et consetetur diam. Odio duis vel labore diam iriure molestie ipsum. In adipiscing elitr clita vero sit wisi ea takimata dolore sit. Lorem sed et gubergren. Tempor nonumy sadipscing rebum magna elitr sed ipsum vero magna sea rebum stet iriure facer dolore est sadipscing.\nTempor et ipsum accumsan aliquam takimata rebum stet et dolore commodo nonumy sed. Sadipscing labore ex vero rebum. Invidunt dolor quis facilisis molestie illum duo elitr nihil dolore ipsum et ut aliquyam stet dolor sed consequat ut. Gubergren consetetur dolor amet facilisi sanctus sea accusam sit feugiat stet stet quis lorem sit nonummy nulla nulla erat. Dolor in in no iusto lorem. Congue rebum elitr facilisi sit ex ut. Gubergren vero dolore et et vero no clita et autem dolor diam diam doming sed invidunt. Et lorem et dolor ut gubergren rebum sea no magna. Consectetuer option at. Vero est et takimata. Gubergren amet et tincidunt dolore duis sadipscing eos diam magna accusam takimata feugiat et. Diam vel ipsum et stet et doming.\n","publishDate":"2022-10-04T01:44:39.4107723+00:00"}</msg>
+<status status="PASS" starttime="20221018 22:44:38.502" endtime="20221018 22:44:38.504"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${RESPOSTA}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20221018 22:44:38.504" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20221018 22:44:38.504" endtime="20221018 22:44:38.505"/>
+</kw>
+<status status="PASS" starttime="20221018 22:44:38.221" endtime="20221018 22:44:38.505"/>
+</kw>
+<kw name="Conferir o status code" library="ResourceAPI">
+<arg>200</arg>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${RESPOSTA.status_code}</arg>
+<arg>${STATUSCODE_DESEJADO}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20221018 22:44:38.508" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20221018 22:44:38.507" endtime="20221018 22:44:38.508"/>
+</kw>
+<status status="PASS" starttime="20221018 22:44:38.506" endtime="20221018 22:44:38.509"/>
+</kw>
+<kw name="Conferir o reason" library="ResourceAPI">
+<arg>OK</arg>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${RESPOSTA.reason}</arg>
+<arg>${REASON_DESEJADO}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20221018 22:44:38.510" endtime="20221018 22:44:38.511"/>
+</kw>
+<status status="PASS" starttime="20221018 22:44:38.509" endtime="20221018 22:44:38.511"/>
+</kw>
+<status status="PASS" starttime="20221018 22:44:38.220" endtime="20221018 22:44:38.512"/>
+</test>
+<doc>Documentação da API: https://fakerestapi.azurewebsites.net/api/v1</doc>
+<status status="PASS" starttime="20221018 22:44:34.982" endtime="20221018 22:44:38.515"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="APITeste">APITeste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
